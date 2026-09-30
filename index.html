@@ -116,9 +116,6 @@
     .project-image { background: linear-gradient(135deg, var(--blue-light) 0%, var(--grey-bg) 100%); height: 220px; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative; }
     .project-card.featured .project-image { height: 100%; min-height: 300px; }
     .project-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .placeholder-inner { display: flex; flex-direction: column; align-items: center; gap: 10px; color: var(--text-muted); }
-    .placeholder-inner svg { opacity: 0.35; }
-    .placeholder-inner span { font-size: 12px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; opacity: 0.5; }
     .project-body { padding: 28px; }
     .project-type { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--blue-accent); margin-bottom: 9px; }
     .project-title { font-family: 'Lora', serif; font-size: 20px; font-weight: 600; color: var(--text-main); margin-bottom: 10px; line-height: 1.3; }
@@ -128,6 +125,8 @@
     .project-highlights { border-top: 1px solid var(--grey-border); padding-top: 14px; display: flex; flex-direction: column; gap: 7px; }
     .project-highlights li { font-size: 13px; color: var(--text-muted); padding-left: 16px; position: relative; list-style: none; line-height: 1.5; }
     .project-highlights li::before { content: '→'; position: absolute; left: 0; color: var(--blue-accent); font-size: 12px; }
+    .project-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 20px; font-size: 13px; font-weight: 700; color: var(--blue-deep); text-decoration: none; transition: color 0.2s, gap 0.2s; }
+    .project-link:hover { color: var(--blue-accent); gap: 10px; }
     #education { background: var(--blue-deep); }
     #education .section-title { color: var(--white); }
     #education .section-label { color: rgba(255,255,255,0.45); }
@@ -208,7 +207,7 @@
       </div>
     </div>
     <div class="hero-stats">
-      <div class="stat-item"><span class="stat-number">6+</span><span class="stat-label">Projects</span></div>
+      <div class="stat-item"><span class="stat-number">7+</span><span class="stat-label">Projects</span></div>
       <div class="stat-item"><span class="stat-number">5+</span><span class="stat-label">Tools</span></div>
       <div class="stat-item"><span class="stat-number">2026</span><span class="stat-label">Certified</span></div>
     </div>
@@ -221,7 +220,7 @@
           <div class="section-label">About Me</div>
           <h2 class="section-title">Data-driven.<br>Goal-oriented.<br>Builder.</h2>
           <p>I'm a <strong>Data Analyst and Backend Developer</strong> who transitioned from Excel and BI tools into full-stack development through structured learning and consistent self-investment. I completed a professional certification in Data Analysis (with code) at SQI College of ICT in April 2026.</p>
-          <p>My analytical work spans marketing campaign analysis, HR performance reporting, and crime data visualisation. All built as end-to-end projects using Excel, Power BI, Tableau, and Python. On the development side, I've built a full Django ecommerce platform from the ground up.</p>
+          <p>My analytical work spans marketing campaign analysis, HR performance reporting, and crime data visualisation. All built as end-to-end projects using Excel, Power BI, Tableau, and Python. On the development side, I've built a full Django ecommerce platform from the ground up, and I now ship AI-powered products such as CVX, a CV analysis and job application platform built with Django REST Framework and React.</p>
           <p>I set targets and I hit them. I care about producing work that is accurate, well-structured, and genuinely useful.</p>
         </div>
         <div class="about-highlights fade-up">
@@ -236,6 +235,10 @@
           <div class="highlight-card">
             <h4>⚙️ Backend Development</h4>
             <p>Built full Django web applications with REST API integrations, MySQL databases, and authentication systems.</p>
+          </div>
+          <div class="highlight-card">
+            <h4>🤖 AI-Powered Products</h4>
+            <p>Shipped CVX, a live platform that uses large language models to analyse, rewrite, and tailor CVs, with payments, email verification, and an admin dashboard.</p>
           </div>
           <div class="highlight-card">
             <h4>🎯 Delivery-Focused</h4>
@@ -272,6 +275,8 @@
             <span class="skill-tag">Pandas</span>
             <span class="skill-tag">NumPy</span>
             <span class="skill-tag">Django</span>
+            <span class="skill-tag">Django REST Framework</span>
+            <span class="skill-tag">React</span>
             <span class="skill-tag">REST APIs</span>
           </div>
         </div>
@@ -280,6 +285,7 @@
           <h3>Databases</h3>
           <div class="skill-tags">
             <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">PostgreSQL</span>
             <span class="skill-tag">SQLite</span>
             <span class="skill-tag">Database Design</span>
             <span class="skill-tag">Query Optimisation</span>
@@ -294,6 +300,8 @@
             <span class="skill-tag">VS Code</span>
             <span class="skill-tag">Bootstrap 5</span>
             <span class="skill-tag">Conda</span>
+            <span class="skill-tag">Render</span>
+            <span class="skill-tag">Vercel</span>
           </div>
         </div>
         <div class="skill-category fade-up">
@@ -314,6 +322,8 @@
             <span class="skill-tag">Django ORM</span>
             <span class="skill-tag">API Integration</span>
             <span class="skill-tag">Authentication</span>
+            <span class="skill-tag">Payments Integration</span>
+            <span class="skill-tag">LLM Integration</span>
             <span class="skill-tag">HTML/CSS</span>
             <span class="skill-tag">eCommerce</span>
           </div>
@@ -328,6 +338,23 @@
       <h2 class="section-title">Experience</h2>
       <p class="section-subtitle">Freelance and contract work across data analytics and full-stack development.</p>
       <div class="timeline">
+        <div class="timeline-item fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="timeline-role">Full-Stack Developer</span>
+              <span class="timeline-date">2026-Present</span>
+            </div>
+            <div class="timeline-company">Founder and Developer, CVX</div>
+            <ul class="timeline-bullets">
+              <li>Built and launched an AI-powered CV analysis platform that covers the full job application workflow: analyse, improve, rewrite, create, rebuild, and apply.</li>
+              <li>Developed the backend with Django REST Framework and the frontend with React, deployed on Render, Neon, and Vercel with a custom domain.</li>
+              <li>Integrated OpenAI models for CV analysis, CV rewriting, and cover letter generation, with tiered output levels from Entry to Executive.</li>
+              <li>Implemented Paystack payments with a top-up plan model, email OTP verification and password reset through Resend, .docx upload support, and an admin dashboard.</li>
+              <li>Redesigned the full interface with a consistent visual system and is now wrapping the React codebase with Capacitor for a mobile app release.</li>
+            </ul>
+          </div>
+        </div>
         <div class="timeline-item fade-up">
           <div class="timeline-dot"></div>
           <div class="timeline-card">
@@ -408,13 +435,35 @@
 
         <div class="project-card featured fade-up">
           <div class="project-image">
-            <!-- To add image: save as montana.jpg in same folder, delete placeholder div, uncomment img tag -->
-            <img src="montana.jpg" alt="Montana Inc. HR Analytics Dashboard">
-            <!-- <img src="montana2.jpg" alt="Montana Inc. HR Analytics Dashboard"> -->
-            <!-- <div class="placeholder-inner">
-              <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-              <span>montana.jpg — place in same folder</span> -->
+            <img src="cvx.jpg" alt="CVX AI CV Analysis Platform">
+          </div>
+          <div class="project-body">
+            <div class="project-type">Web Development · AI · Django REST Framework · React</div>
+            <h3 class="project-title">CVX: AI-Powered CV Analysis and Job Application Platform</h3>
+            <p class="project-desc">A live, full-stack platform that helps job seekers analyse their CVs, rewrite them, generate tailored cover letters, and build new CVs from scratch. Built end-to-end as founder and sole developer, from the REST API and AI integration to payments, email verification, and deployment.</p>
+            <div class="project-tools">
+              <span class="tool-tag">Django REST Framework</span>
+              <span class="tool-tag">React</span>
+              <span class="tool-tag">OpenAI API</span>
+              <span class="tool-tag">PostgreSQL</span>
+              <span class="tool-tag">Paystack</span>
+              <span class="tool-tag">Render</span>
+              <span class="tool-tag">Vercel</span>
             </div>
+            <ul class="project-highlights">
+              <li>Six-step workflow covering Analyze, Improve, Rewrite, Create, Rebuild, and Apply</li>
+              <li>AI-powered CV analysis, CV rewriting, and cover letter generation with tiered levels from Entry to Executive</li>
+              <li>Paystack payments with Starter, Plus, and Max top-up plans, plus an admin dashboard for user management</li>
+              <li>Secure auth with email OTP verification and password reset, using Resend on a custom domain</li>
+              <li>PDF and .docx support, with a Capacitor mobile app in progress from the same React codebase</li>
+            </ul>
+            <a href="https://www.cvxanalyzer.com.ng" target="_blank" rel="noopener" class="project-link">Visit Live Site →</a>
+          </div>
+        </div>
+
+        <div class="project-card featured fade-up">
+          <div class="project-image">
+            <img src="montana.jpg" alt="Montana Inc. HR Analytics Dashboard">
           </div>
           <div class="project-body">
             <div class="project-type">Data Analytics · Excel · Power BI</div>
@@ -438,13 +487,7 @@
 
         <div class="project-card featured fade-up">
           <div class="project-image">
-            <!-- To add image: save as montana.jpg in same folder, delete placeholder div, uncomment img tag -->
             <img src="upd 4.png" alt="Airline Loyalty Program Retention Analysis">
-            <!-- <img src="montana2.jpg" alt="Montana Inc. HR Analytics Dashboard"> -->
-            <!-- <div class="placeholder-inner">
-              <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-              <span>montana.jpg — place in same folder</span> -->
-            </div>
           </div>
           <div class="project-body">
             <div class="project-type">Airline Loyalty Program Analysis. Power BI</div>
@@ -468,12 +511,7 @@
 
         <div class="project-card fade-up">
           <div class="project-image">
-            <!-- To add image: save as fbi_crime.jpg in same folder, delete placeholder div, uncomment img tag -->
             <img src="fbi_crime.jpg" alt="FBI Crime Data Tableau Dashboard">
-            <!-- <div class="placeholder-inner">
-              <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg>
-              <span>fbi_crime.jpg — place in same folder</span>
-            </div> -->
           </div>
           <div class="project-body">
             <div class="project-type">Data Analytics · Tableau</div>
@@ -495,12 +533,7 @@
 
         <div class="project-card fade-up">
           <div class="project-image">
-            <!-- To add image: save as treadlight.jpg in same folder, delete placeholder div, uncomment img tag -->
             <img src="treadlight.jpg" alt="Treadlight Ecommerce Platform">
-            <!-- <div class="placeholder-inner">
-              <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
-              <span>treadlight.jpg — place in same folder</span>
-            </div> -->
           </div>
           <div class="project-body">
             <div class="project-type">Web Development · Django</div>
@@ -520,14 +553,10 @@
             </ul>
           </div>
         </div>
+
         <div class="project-card fade-up">
           <div class="project-image">
-            <!-- To add image: save as treadlight.jpg in same folder, delete placeholder div, uncomment img tag -->
             <img src="Blo P.jpg" alt="True Crime Chronicles Platform">
-            <!-- <div class="placeholder-inner">
-              <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
-              <span>treadlight.jpg — place in same folder</span>
-            </div> -->
           </div>
           <div class="project-body">
             <div class="project-type">Web Development · Django</div>
@@ -552,12 +581,7 @@
 
         <div class="project-card fade-up">
           <div class="project-image">
-            <!-- To add image: save as treadlight.jpg in same folder, delete placeholder div, uncomment img tag -->
             <img src="Stat p.jpg" alt="StatFort Gaming Analytics Platform">
-            <!-- <div class="placeholder-inner">
-              <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
-              <span>treadlight.jpg — place in same folder</span>
-            </div> -->
           </div>
           <div class="project-body">
             <div class="project-type">Web Development · Django</div>
